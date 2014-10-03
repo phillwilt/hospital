@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Physician:
+  = @appointment.physician.name
+%p
+  %b Patient:
+  = @appointment.patient.name
+%p
+  %b Date:
+  = @appointment.date
+
+= link_to 'Edit', edit_appointment_path(@appointment)
+\|
+= link_to 'Back', appointments_path

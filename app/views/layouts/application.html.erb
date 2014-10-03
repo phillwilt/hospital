@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<ul id="navigation">
+  <li><%= link_to 'Appointments', appointments_path %></li>
+  <li><%= link_to 'Physicians', physicians_path %></li>
+  <li><%= link_to 'Patients', patients_path %></li>
+</ul>
+
 <%= yield %>
 
 </body>
