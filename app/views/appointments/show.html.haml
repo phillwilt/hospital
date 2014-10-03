@@ -1,5 +1,3 @@
-%p#notice= notice
-
 %p
   %b Physician:
   = @appointment.physician.name
@@ -10,6 +8,5 @@
   %b Date:
   = @appointment.date
 
-= link_to 'Edit', edit_appointment_path(@appointment)
-\|
-= link_to 'Back', appointments_path
+= link_to 'Edit', edit_appointment_path(@appointment), class: 'button'
+= link_to 'Back', appointments_path, class: 'button'
