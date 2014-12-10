@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :appointments
+
+  resources :patients
+
+  resources :physicians
+
+  root 'appointments#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

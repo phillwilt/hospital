@@ -1,0 +1,15 @@
+%p
+  %b Name:
+  = @patient.name
+
+%h3 Appointments
+%ul
+  - @patient.appointments.each do |appointment|
+    %li
+      %a{href: appointment_path(appointment)}
+        = appointment.date.strftime('%b %d %Y - %H:%M:%S')
+        with
+        = appointment.physician.name
+
+= link_to 'Edit', edit_patient_path(@patient), class: 'button'
+= link_to 'Back', patients_path, class: 'button'
